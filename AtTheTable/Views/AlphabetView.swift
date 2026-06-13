@@ -10,6 +10,7 @@ struct AlphabetView: View {
     @State private var selectedAnswer: String?
     @State private var showingResult = false
     @State private var correctCount = 0
+    @State private var quizResults: [QuizResult] = []
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -117,7 +118,6 @@ struct AlphabetView: View {
                                         .fill(selectedAnswer == option ? .blue.opacity(0.2) : Color(.systemGray6))
                                 )
                             }
-                            .disabled(selectedAnswer != nil)
                         }
                     }
                     
@@ -140,48 +140,90 @@ struct AlphabetView: View {
     }
     
     private var recognitionResultView: some View {
-        VStack(spacing: 24) {
-            Image(systemName: correctCount >= 6 ? "checkmark.circle.fill" : "xmark.circle.fill")
-                .font(.system(size: 64))
-                .foregroundColor(correctCount >= 6 ? .green : .orange)
-            
-            Text(correctCount >= 6 ? "Excellent!" : "Good try!")
-                .font(.largeTitle.bold())
-            
-            Text("You got \(correctCount) out of \(recognitionQuestions.count) correct")
-                .font(.headline)
-                .foregroundColor(.secondary)
-            
-            if correctCount >= 6 {
-                Text("You've completed the alphabet! Phrase lessons are now unlocked.")
-                    .multilineTextAlignment(.center)
-                    .padding()
-            } else {
-                Text("Review the alphabet and try again when you're ready.")
-                    .multilineTextAlignment(.center)
-                    .padding()
-            }
-            
-            HStack(spacing: 16) {
-                if correctCount < 6 {
-                    Button("Review Alphabet") {
-                        resetToTeaching()
+        ScrollView {
+            VStack(spacing: 24) {
+                Image(systemName: correctCount >= 6 ? "checkmark.circle.fill" : "xmark.circle.fill")
+                    .font(.system(size: 64))
+                    .foregroundColor(correctCount >= 6 ? .green : .orange)
+                
+                Text(correctCount >= 6 ? "Excellent!" : "Good try!")
+                    .font(.largeTitle.bold())
+                
+                Text("You got \(correctCount) out of \(recognitionQuestions.count) correct")
+                    .font(.headline)
+                    .foregroundColor(.secondary)
+                
+                // Show detailed results
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("Quiz Results:")
+                        .font(.headline)
+                        .padding(.top)
+                    
+                    ForEach(Array(quizResults.enumerated()), id: \.offset) { index, result in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    Text(result.letter.upper)
+                                        .font(.title2.bold())
+                                    Image(systemName: result.isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                        .foregroundColor(result.isCorrect ? .green : .red)
+                                }
+                                
+                                if !result.isCorrect {
+                                    HStack {
+                                        Text("Your answer:")
+                                            .foregroundColor(.secondary)
+                                        Text(result.userAnswer)
+                                            .foregroundColor(.red)
+                                    }
+                                    .font(.caption)
+                                    
+                                    HStack {
+                                        Text("Correct answer:")
+                                            .foregroundColor(.secondary)
+                                        Text(result.correctAnswer)
+                                            .foregroundColor(.green)
+                                    }
+                                    .font(.caption)
+                                }
+                            }
+                            Spacer()
+                        }
+                        .padding(.vertical, 4)
                     }
-                    .buttonStyle(.bordered)
+                }
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial))
+                
+                if correctCount >= 6 {
+                    Text("You've completed the alphabet! Phrase lessons are now unlocked.")
+                        .multilineTextAlignment(.center)
+                        .padding()
+                } else {
+                    Text("Review the alphabet and try again when you're ready.")
+                        .multilineTextAlignment(.center)
+                        .padding()
                 }
                 
-                Button(correctCount >= 6 ? "Continue" : "Back to Home") {
-                    if correctCount >= 6 {
-                        hasSeenAlphabetIntro = true
+                HStack(spacing: 16) {
+                    if correctCount < 6 {
+                        Button("Review Alphabet") {
+                            resetToTeaching()
+                        }
+                        .buttonStyle(.bordered)
                     }
-                    dismiss()
+                    
+                    Button(correctCount >= 6 ? "Continue" : "Back to Home") {
+                        if correctCount >= 6 {
+                            hasSeenAlphabetIntro = true
+                        }
+                        dismiss()
+                    }
+                    .buttonStyle(.borderedProminent)
                 }
-                .buttonStyle(.borderedProminent)
             }
-            
-            Spacer()
+            .padding()
         }
-        .padding()
     }
     
     private func startRecognitionCheck() {
@@ -201,19 +243,34 @@ struct AlphabetView: View {
         
         currentQuestionIndex = 0
         correctCount = 0
+        quizResults = []
         showingRecognitionCheck = true
     }
     
     private func selectAnswer(_ answer: String) {
         selectedAnswer = answer
-        
-        let question = recognitionQuestions[currentQuestionIndex]
-        if answer == question.letter.roman {
-            correctCount += 1
-        }
     }
     
     private func nextQuestion() {
+        // Only count the answer when user submits by clicking Next
+        if let answer = selectedAnswer {
+            let question = recognitionQuestions[currentQuestionIndex]
+            let isCorrect = answer == question.letter.roman
+            
+            // Track the result
+            let result = QuizResult(
+                letter: question.letter,
+                userAnswer: answer,
+                correctAnswer: question.letter.roman,
+                isCorrect: isCorrect
+            )
+            quizResults.append(result)
+            
+            if isCorrect {
+                correctCount += 1
+            }
+        }
+        
         selectedAnswer = nil
         currentQuestionIndex += 1
     }
@@ -314,6 +371,13 @@ struct LetterCardView: View {
 struct RecognitionQuestion {
     let letter: AlphabetLetter
     let options: [String]
+}
+
+struct QuizResult {
+    let letter: AlphabetLetter
+    let userAnswer: String
+    let correctAnswer: String
+    let isCorrect: Bool
 }
 
 #Preview {

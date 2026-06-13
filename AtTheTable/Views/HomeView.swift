@@ -5,10 +5,12 @@ struct HomeView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var allProgress: [CardProgress]
     @AppStorage("hasSeenAlphabetIntro") private var hasSeenAlphabetIntro = false
+    @AppStorage("debugModeEnabled") private var debugModeEnabled = false
     @State private var contentStore = ContentStore.shared
     @State private var showingSettings = false
     @State private var showingAlphabet = false
     @State private var selectedLevel: Level?
+    @State private var headerTapCount = 0
     
     var body: some View {
         NavigationStack {
@@ -54,9 +56,23 @@ struct HomeView: View {
                     Text("At the Table")
                         .font(.largeTitle.bold())
                         .foregroundColor(.primary)
-                    Text("на маса")
-                        .font(.title3)
-                        .foregroundColor(.secondary)
+                    HStack {
+                        Text("на маса")
+                            .font(.title3)
+                            .foregroundColor(.secondary)
+                        if debugModeEnabled {
+                            Text("(Debug)")
+                                .font(.caption)
+                                .foregroundColor(.orange)
+                        }
+                    }
+                }
+                .onTapGesture {
+                    headerTapCount += 1
+                    if headerTapCount >= 7 {
+                        debugModeEnabled.toggle()
+                        headerTapCount = 0
+                    }
                 }
                 
                 Spacer()
@@ -86,7 +102,10 @@ struct HomeView: View {
     }
     
     private func isUnlocked(_ level: Level) -> Bool {
-        Mastery.isLevelUnlocked(level, allProgress: allProgress, contentStore: contentStore, hasSeenAlphabetIntro: hasSeenAlphabetIntro)
+        if debugModeEnabled {
+            return true
+        }
+        return Mastery.isLevelUnlocked(level, allProgress: allProgress, contentStore: contentStore, hasSeenAlphabetIntro: hasSeenAlphabetIntro)
     }
     
     private func isComplete(_ level: Level) -> Bool {
