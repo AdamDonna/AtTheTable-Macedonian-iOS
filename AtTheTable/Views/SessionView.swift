@@ -59,7 +59,6 @@ struct SessionView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Query private var allProgress: [CardProgress]
-    @AppStorage("showRomanOnFront") private var showRomanOnFront = false
     @State private var sessionModel: SessionModel?
     @State private var showingSummary = false
     @State private var isButtonDisabled = false
@@ -97,7 +96,6 @@ struct SessionView: View {
                 FlashcardCard(
                     card: card,
                     revealed: model.revealed,
-                    showRomanOnFront: showRomanOnFront,
                     onReveal: { model.reveal() }
                 )
                 .id(card.id)
@@ -203,7 +201,6 @@ struct SessionView: View {
 struct FlashcardCard: View {
     let card: Card
     let revealed: Bool
-    let showRomanOnFront: Bool
     let onReveal: () -> Void
     
     var body: some View {
@@ -234,12 +231,10 @@ struct FlashcardCard: View {
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.5)
             
-            if showRomanOnFront {
-                Text(card.roman)
-                    .font(.title3)
-                    .foregroundColor(.secondary)
-                    .multilineTextAlignment(.center)
-            }
+            Text(card.roman)
+                .font(.title3)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
             
             Spacer()
             

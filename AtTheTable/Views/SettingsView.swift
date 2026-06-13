@@ -3,7 +3,6 @@ import SwiftData
 
 struct SettingsView: View {
     @Environment(\.modelContext) private var modelContext
-    @AppStorage("showRomanOnFront") private var showRomanOnFront = false
     @AppStorage("reminderEnabled") private var reminderEnabled = false
     @AppStorage("reminderHour") private var reminderHour = 19
     @AppStorage("reminderMinute") private var reminderMinute = 0
@@ -15,10 +14,6 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section("Cards") {
-                    Toggle("Show romanisation on card front", isOn: $showRomanOnFront)
-                }
-                
                 Section("Daily Reminder") {
                     Toggle("Enable daily practice reminder", isOn: $reminderEnabled)
                         .onChange(of: reminderEnabled) { _, newValue in
