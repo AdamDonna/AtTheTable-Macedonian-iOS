@@ -26,12 +26,12 @@ struct Curriculum: Codable {
     let decks: [Deck]
 }
 
-enum LevelType: String, Codable {
+enum LevelType: String, Codable, Hashable {
     case alphabet
     case phrases
 }
 
-enum UnlockType: String, Codable {
+enum UnlockType: String, Codable, Hashable {
     case none
     case levelMastery
 }
