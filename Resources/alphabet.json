@@ -1,0 +1,405 @@
+[
+  {
+    "id": "а",
+    "upper": "А",
+    "lower": "а",
+    "roman": "a",
+    "soundHint": "like 'a' in 'father'",
+    "example": {
+      "cyrillic": "автобус",
+      "roman": "avtobus",
+      "en": "bus"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "б",
+    "upper": "Б",
+    "lower": "б",
+    "roman": "b",
+    "soundHint": "like 'b' in 'ball'",
+    "example": {
+      "cyrillic": "баба",
+      "roman": "baba",
+      "en": "grandmother"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "в",
+    "upper": "В",
+    "lower": "в",
+    "roman": "v",
+    "soundHint": "like 'v' in 'very'",
+    "example": {
+      "cyrillic": "вода",
+      "roman": "voda",
+      "en": "water"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "г",
+    "upper": "Г",
+    "lower": "г",
+    "roman": "g",
+    "soundHint": "like 'g' in 'go'",
+    "example": {
+      "cyrillic": "глава",
+      "roman": "glava",
+      "en": "head"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "д",
+    "upper": "Д",
+    "lower": "д",
+    "roman": "d",
+    "soundHint": "like 'd' in 'dog'",
+    "example": {
+      "cyrillic": "дом",
+      "roman": "dom",
+      "en": "house"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "ѓ",
+    "upper": "Ѓ",
+    "lower": "ѓ",
+    "roman": "ǵ",
+    "soundHint": "soft 'g' with 'y' sound",
+    "example": {
+      "cyrillic": "ѓубре",
+      "roman": "ǵubre",
+      "en": "trash"
+    },
+    "distinctive": true
+  },
+  {
+    "id": "е",
+    "upper": "Е",
+    "lower": "е",
+    "roman": "e",
+    "soundHint": "like 'e' in 'bet'",
+    "example": {
+      "cyrillic": "елен",
+      "roman": "elen",
+      "en": "deer"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "ж",
+    "upper": "Ж",
+    "lower": "ж",
+    "roman": "ž",
+    "soundHint": "like 's' in 'pleasure'",
+    "example": {
+      "cyrillic": "жена",
+      "roman": "žena",
+      "en": "woman"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "з",
+    "upper": "З",
+    "lower": "з",
+    "roman": "z",
+    "soundHint": "like 'z' in 'zoo'",
+    "example": {
+      "cyrillic": "зима",
+      "roman": "zima",
+      "en": "winter"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "ѕ",
+    "upper": "Ѕ",
+    "lower": "ѕ",
+    "roman": "dz",
+    "soundHint": "like 'ds' in 'woods'",
+    "example": {
+      "cyrillic": "ѕвезда",
+      "roman": "dzvezda",
+      "en": "star"
+    },
+    "distinctive": true
+  },
+  {
+    "id": "и",
+    "upper": "И",
+    "lower": "и",
+    "roman": "i",
+    "soundHint": "like 'ee' in 'see'",
+    "example": {
+      "cyrillic": "име",
+      "roman": "ime",
+      "en": "name"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "ј",
+    "upper": "Ј",
+    "lower": "ј",
+    "roman": "j",
+    "soundHint": "like 'y' in 'yes'",
+    "example": {
+      "cyrillic": "јаболко",
+      "roman": "jabolko",
+      "en": "apple"
+    },
+    "distinctive": true
+  },
+  {
+    "id": "к",
+    "upper": "К",
+    "lower": "к",
+    "roman": "k",
+    "soundHint": "like 'k' in 'key'",
+    "example": {
+      "cyrillic": "куче",
+      "roman": "kuče",
+      "en": "dog"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "л",
+    "upper": "Л",
+    "lower": "л",
+    "roman": "l",
+    "soundHint": "like 'l' in 'love'",
+    "example": {
+      "cyrillic": "лице",
+      "roman": "lice",
+      "en": "face"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "љ",
+    "upper": "Љ",
+    "lower": "љ",
+    "roman": "lj",
+    "soundHint": "like 'll' in 'million'",
+    "example": {
+      "cyrillic": "љубов",
+      "roman": "ljubov",
+      "en": "love"
+    },
+    "distinctive": true
+  },
+  {
+    "id": "м",
+    "upper": "М",
+    "lower": "м",
+    "roman": "m",
+    "soundHint": "like 'm' in 'mother'",
+    "example": {
+      "cyrillic": "мајка",
+      "roman": "majka",
+      "en": "mother"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "н",
+    "upper": "Н",
+    "lower": "н",
+    "roman": "n",
+    "soundHint": "like 'n' in 'no'",
+    "example": {
+      "cyrillic": "нос",
+      "roman": "nos",
+      "en": "nose"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "њ",
+    "upper": "Њ",
+    "lower": "њ",
+    "roman": "nj",
+    "soundHint": "like 'ni' in 'onion'",
+    "example": {
+      "cyrillic": "њива",
+      "roman": "njiva",
+      "en": "field"
+    },
+    "distinctive": true
+  },
+  {
+    "id": "о",
+    "upper": "О",
+    "lower": "о",
+    "roman": "o",
+    "soundHint": "like 'o' in 'more'",
+    "example": {
+      "cyrillic": "око",
+      "roman": "oko",
+      "en": "eye"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "п",
+    "upper": "П",
+    "lower": "п",
+    "roman": "p",
+    "soundHint": "like 'p' in 'pen'",
+    "example": {
+      "cyrillic": "пат",
+      "roman": "pat",
+      "en": "road"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "р",
+    "upper": "Р",
+    "lower": "р",
+    "roman": "r",
+    "soundHint": "rolled 'r'",
+    "example": {
+      "cyrillic": "рака",
+      "roman": "raka",
+      "en": "hand"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "с",
+    "upper": "С",
+    "lower": "с",
+    "roman": "s",
+    "soundHint": "like 's' in 'sun'",
+    "example": {
+      "cyrillic": "сонце",
+      "roman": "sonce",
+      "en": "sun"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "т",
+    "upper": "Т",
+    "lower": "т",
+    "roman": "t",
+    "soundHint": "like 't' in 'top'",
+    "example": {
+      "cyrillic": "татко",
+      "roman": "tatko",
+      "en": "father"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "ќ",
+    "upper": "Ќ",
+    "lower": "ќ",
+    "roman": "ḱ",
+    "soundHint": "soft 'k' with 'y' sound",
+    "example": {
+      "cyrillic": "ќерка",
+      "roman": "ḱerka",
+      "en": "daughter"
+    },
+    "distinctive": true
+  },
+  {
+    "id": "у",
+    "upper": "У",
+    "lower": "у",
+    "roman": "u",
+    "soundHint": "like 'oo' in 'boot'",
+    "example": {
+      "cyrillic": "ум",
+      "roman": "um",
+      "en": "mind"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "ф",
+    "upper": "Ф",
+    "lower": "ф",
+    "roman": "f",
+    "soundHint": "like 'f' in 'fine'",
+    "example": {
+      "cyrillic": "фрли",
+      "roman": "frli",
+      "en": "throw"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "х",
+    "upper": "Х",
+    "lower": "х",
+    "roman": "h",
+    "soundHint": "like 'ch' in 'Bach'",
+    "example": {
+      "cyrillic": "хлеб",
+      "roman": "hleb",
+      "en": "bread"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "ц",
+    "upper": "Ц",
+    "lower": "ц",
+    "roman": "c",
+    "soundHint": "like 'ts' in 'cats'",
+    "example": {
+      "cyrillic": "цвет",
+      "roman": "cvet",
+      "en": "flower"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "ч",
+    "upper": "Ч",
+    "lower": "ч",
+    "roman": "č",
+    "soundHint": "like 'ch' in 'chair'",
+    "example": {
+      "cyrillic": "час",
+      "roman": "čas",
+      "en": "hour"
+    },
+    "distinctive": false
+  },
+  {
+    "id": "џ",
+    "upper": "Џ",
+    "lower": "џ",
+    "roman": "dž",
+    "soundHint": "like 'j' in 'judge'",
+    "example": {
+      "cyrillic": "џеб",
+      "roman": "džeb",
+      "en": "pocket"
+    },
+    "distinctive": true
+  },
+  {
+    "id": "ш",
+    "upper": "Ш",
+    "lower": "ш",
+    "roman": "š",
+    "soundHint": "like 'sh' in 'shoe'",
+    "example": {
+      "cyrillic": "шума",
+      "roman": "šuma",
+      "en": "forest"
+    },
+    "distinctive": false
+  }
+]

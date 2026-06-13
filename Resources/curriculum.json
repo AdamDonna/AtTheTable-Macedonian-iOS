@@ -1,0 +1,563 @@
+{
+  "contentVersion": 1,
+  "levels": [
+    {
+      "id": "alphabet",
+      "order": 0,
+      "title": "Азбука",
+      "subtitle": "Alphabet",
+      "type": "alphabet",
+      "deckId": null,
+      "unlock": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "greetings",
+      "order": 1,
+      "title": "Поздрави",
+      "subtitle": "Greetings",
+      "type": "phrases",
+      "deckId": "greetings-deck",
+      "unlock": {
+        "type": "levelMastery",
+        "levelId": "alphabet",
+        "threshold": 0.8,
+        "minBox": 3
+      }
+    },
+    {
+      "id": "family",
+      "order": 2,
+      "title": "Семејство",
+      "subtitle": "Family",
+      "type": "phrases",
+      "deckId": "family-deck",
+      "unlock": {
+        "type": "levelMastery",
+        "levelId": "greetings",
+        "threshold": 0.8,
+        "minBox": 3
+      }
+    },
+    {
+      "id": "at-table",
+      "order": 3,
+      "title": "На маса",
+      "subtitle": "At the Table",
+      "type": "phrases",
+      "deckId": "at-table-deck",
+      "unlock": {
+        "type": "levelMastery",
+        "levelId": "family",
+        "threshold": 0.8,
+        "minBox": 3
+      }
+    },
+    {
+      "id": "small-talk",
+      "order": 4,
+      "title": "Мал разговор",
+      "subtitle": "Small Talk",
+      "type": "phrases",
+      "deckId": "small-talk-deck",
+      "unlock": {
+        "type": "levelMastery",
+        "levelId": "at-table",
+        "threshold": 0.8,
+        "minBox": 3
+      }
+    },
+    {
+      "id": "at-home",
+      "order": 5,
+      "title": "Дома",
+      "subtitle": "At Home",
+      "type": "phrases",
+      "deckId": "at-home-deck",
+      "unlock": {
+        "type": "levelMastery",
+        "levelId": "small-talk",
+        "threshold": 0.8,
+        "minBox": 3
+      }
+    }
+  ],
+  "decks": [
+    {
+      "id": "greetings-deck",
+      "cards": [
+        {
+          "id": "card-hello",
+          "front": "Здраво",
+          "roman": "Zdravo",
+          "back": "Hello",
+          "audio": null,
+          "note": null,
+          "tags": ["greeting"]
+        },
+        {
+          "id": "card-good-morning",
+          "front": "Добро утро",
+          "roman": "Dobro utro",
+          "back": "Good morning",
+          "audio": null,
+          "note": null,
+          "tags": ["greeting", "time"]
+        },
+        {
+          "id": "card-good-evening",
+          "front": "Добра вечер",
+          "roman": "Dobra večer",
+          "back": "Good evening",
+          "audio": null,
+          "note": null,
+          "tags": ["greeting", "time"]
+        },
+        {
+          "id": "card-goodbye",
+          "front": "Довидување",
+          "roman": "Doviduvanje",
+          "back": "Goodbye",
+          "audio": null,
+          "note": null,
+          "tags": ["farewell"]
+        },
+        {
+          "id": "card-see-you",
+          "front": "Се гледаме",
+          "roman": "Se gledame",
+          "back": "See you later",
+          "audio": null,
+          "note": null,
+          "tags": ["farewell"]
+        },
+        {
+          "id": "card-thank-you",
+          "front": "Благодарам",
+          "roman": "Blagodaram",
+          "back": "Thank you",
+          "audio": null,
+          "note": null,
+          "tags": ["courtesy"]
+        },
+        {
+          "id": "card-please",
+          "front": "Ве молам",
+          "roman": "Ve molam",
+          "back": "Please",
+          "audio": null,
+          "note": null,
+          "tags": ["courtesy"]
+        },
+        {
+          "id": "card-excuse-me",
+          "front": "Извинете",
+          "roman": "Izvinete",
+          "back": "Excuse me",
+          "audio": null,
+          "note": null,
+          "tags": ["courtesy"]
+        }
+      ]
+    },
+    {
+      "id": "family-deck",
+      "cards": [
+        {
+          "id": "card-mother",
+          "front": "мајка",
+          "roman": "majka",
+          "back": "mother",
+          "audio": null,
+          "note": null,
+          "tags": ["family"]
+        },
+        {
+          "id": "card-father",
+          "front": "татко",
+          "roman": "tatko",
+          "back": "father",
+          "audio": null,
+          "note": null,
+          "tags": ["family"]
+        },
+        {
+          "id": "card-grandmother",
+          "front": "баба",
+          "roman": "baba",
+          "back": "grandmother",
+          "audio": null,
+          "note": null,
+          "tags": ["family"]
+        },
+        {
+          "id": "card-grandfather",
+          "front": "дедо",
+          "roman": "dedo",
+          "back": "grandfather",
+          "audio": null,
+          "note": null,
+          "tags": ["family"]
+        },
+        {
+          "id": "card-son",
+          "front": "син",
+          "roman": "sin",
+          "back": "son",
+          "audio": null,
+          "note": null,
+          "tags": ["family"]
+        },
+        {
+          "id": "card-daughter",
+          "front": "ќерка",
+          "roman": "ḱerka",
+          "back": "daughter",
+          "audio": null,
+          "note": null,
+          "tags": ["family"]
+        },
+        {
+          "id": "card-brother",
+          "front": "брат",
+          "roman": "brat",
+          "back": "brother",
+          "audio": null,
+          "note": null,
+          "tags": ["family"]
+        },
+        {
+          "id": "card-sister",
+          "front": "сестра",
+          "roman": "sestra",
+          "back": "sister",
+          "audio": null,
+          "note": null,
+          "tags": ["family"]
+        },
+        {
+          "id": "card-aunt",
+          "front": "тетка",
+          "roman": "tetka",
+          "back": "aunt",
+          "audio": null,
+          "note": null,
+          "tags": ["family"]
+        },
+        {
+          "id": "card-uncle",
+          "front": "вујко",
+          "roman": "vujko",
+          "back": "uncle",
+          "audio": null,
+          "note": "maternal uncle",
+          "tags": ["family"]
+        },
+        {
+          "id": "card-family",
+          "front": "семејство",
+          "roman": "semejstvo",
+          "back": "family",
+          "audio": null,
+          "note": null,
+          "tags": ["family"]
+        }
+      ]
+    },
+    {
+      "id": "at-table-deck",
+      "cards": [
+        {
+          "id": "card-food",
+          "front": "храна",
+          "roman": "hrana",
+          "back": "food",
+          "audio": null,
+          "note": null,
+          "tags": ["food"]
+        },
+        {
+          "id": "card-water",
+          "front": "вода",
+          "roman": "voda",
+          "back": "water",
+          "audio": null,
+          "note": null,
+          "tags": ["drink"]
+        },
+        {
+          "id": "card-bread",
+          "front": "леб",
+          "roman": "leb",
+          "back": "bread",
+          "audio": null,
+          "note": null,
+          "tags": ["food"]
+        },
+        {
+          "id": "card-cheese",
+          "front": "сирење",
+          "roman": "sirenje",
+          "back": "cheese",
+          "audio": null,
+          "note": null,
+          "tags": ["food"]
+        },
+        {
+          "id": "card-meat",
+          "front": "месо",
+          "roman": "meso",
+          "back": "meat",
+          "audio": null,
+          "note": null,
+          "tags": ["food"]
+        },
+        {
+          "id": "card-delicious",
+          "front": "вкусно",
+          "roman": "vkusno",
+          "back": "delicious",
+          "audio": null,
+          "note": null,
+          "tags": ["adjective"]
+        },
+        {
+          "id": "card-hungry",
+          "front": "гладен",
+          "roman": "gladen",
+          "back": "hungry (masculine)",
+          "audio": null,
+          "note": null,
+          "tags": ["adjective"]
+        },
+        {
+          "id": "card-thirsty",
+          "front": "жеден",
+          "roman": "žeden",
+          "back": "thirsty (masculine)",
+          "audio": null,
+          "note": null,
+          "tags": ["adjective"]
+        },
+        {
+          "id": "card-eat",
+          "front": "јадам",
+          "roman": "jadam",
+          "back": "I eat",
+          "audio": null,
+          "note": null,
+          "tags": ["verb"]
+        },
+        {
+          "id": "card-drink",
+          "front": "пијам",
+          "roman": "pijam",
+          "back": "I drink",
+          "audio": null,
+          "note": null,
+          "tags": ["verb"]
+        },
+        {
+          "id": "card-bon-appetit",
+          "front": "Пријатно",
+          "roman": "Prijatno",
+          "back": "Bon appétit / Enjoy your meal",
+          "audio": null,
+          "note": null,
+          "tags": ["courtesy"]
+        }
+      ]
+    },
+    {
+      "id": "small-talk-deck",
+      "cards": [
+        {
+          "id": "card-how-are-you",
+          "front": "Како си?",
+          "roman": "Kako si?",
+          "back": "How are you?",
+          "audio": null,
+          "note": null,
+          "tags": ["question"]
+        },
+        {
+          "id": "card-fine",
+          "front": "Добро сум",
+          "roman": "Dobro sum",
+          "back": "I'm fine",
+          "audio": null,
+          "note": null,
+          "tags": ["response"]
+        },
+        {
+          "id": "card-what-name",
+          "front": "Како се викаш?",
+          "roman": "Kako se vikaš?",
+          "back": "What's your name?",
+          "audio": null,
+          "note": null,
+          "tags": ["question"]
+        },
+        {
+          "id": "card-my-name",
+          "front": "Јас се викам",
+          "roman": "Jas se vikam",
+          "back": "My name is",
+          "audio": null,
+          "note": null,
+          "tags": ["response"]
+        },
+        {
+          "id": "card-where-from",
+          "front": "Од каде си?",
+          "roman": "Od kade si?",
+          "back": "Where are you from?",
+          "audio": null,
+          "note": null,
+          "tags": ["question"]
+        },
+        {
+          "id": "card-nice-weather",
+          "front": "Убаво време",
+          "roman": "Ubavo vreme",
+          "back": "Nice weather",
+          "audio": null,
+          "note": null,
+          "tags": ["weather"]
+        },
+        {
+          "id": "card-cold",
+          "front": "студено",
+          "roman": "studeno",
+          "back": "cold",
+          "audio": null,
+          "note": null,
+          "tags": ["weather"]
+        },
+        {
+          "id": "card-hot",
+          "front": "топло",
+          "roman": "toplo",
+          "back": "warm/hot",
+          "audio": null,
+          "note": null,
+          "tags": ["weather"]
+        },
+        {
+          "id": "card-yes",
+          "front": "да",
+          "roman": "da",
+          "back": "yes",
+          "audio": null,
+          "note": null,
+          "tags": ["basic"]
+        },
+        {
+          "id": "card-no",
+          "front": "не",
+          "roman": "ne",
+          "back": "no",
+          "audio": null,
+          "note": null,
+          "tags": ["basic"]
+        }
+      ]
+    },
+    {
+      "id": "at-home-deck",
+      "cards": [
+        {
+          "id": "card-house",
+          "front": "куќа",
+          "roman": "kuḱa",
+          "back": "house",
+          "audio": null,
+          "note": null,
+          "tags": ["home"]
+        },
+        {
+          "id": "card-room",
+          "front": "соба",
+          "roman": "soba",
+          "back": "room",
+          "audio": null,
+          "note": null,
+          "tags": ["home"]
+        },
+        {
+          "id": "card-kitchen",
+          "front": "кујна",
+          "roman": "kujna",
+          "back": "kitchen",
+          "audio": null,
+          "note": null,
+          "tags": ["home"]
+        },
+        {
+          "id": "card-bathroom",
+          "front": "бања",
+          "roman": "banja",
+          "back": "bathroom",
+          "audio": null,
+          "note": null,
+          "tags": ["home"]
+        },
+        {
+          "id": "card-bed",
+          "front": "кревет",
+          "roman": "krevet",
+          "back": "bed",
+          "audio": null,
+          "note": null,
+          "tags": ["home"]
+        },
+        {
+          "id": "card-chair",
+          "front": "стол",
+          "roman": "stol",
+          "back": "chair",
+          "audio": null,
+          "note": null,
+          "tags": ["furniture"]
+        },
+        {
+          "id": "card-table",
+          "front": "маса",
+          "roman": "masa",
+          "back": "table",
+          "audio": null,
+          "note": null,
+          "tags": ["furniture"]
+        },
+        {
+          "id": "card-television",
+          "front": "телевизор",
+          "roman": "televizor",
+          "back": "television",
+          "audio": null,
+          "note": null,
+          "tags": ["home"]
+        },
+        {
+          "id": "card-clean",
+          "front": "чисто",
+          "roman": "čisto",
+          "back": "clean",
+          "audio": null,
+          "note": null,
+          "tags": ["adjective"]
+        },
+        {
+          "id": "card-comfortable",
+          "front": "удобно",
+          "roman": "udobno",
+          "back": "comfortable",
+          "audio": null,
+          "note": null,
+          "tags": ["adjective"]
+        }
+      ]
+    }
+  ]
+}
