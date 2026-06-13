@@ -245,7 +245,7 @@ struct FlashcardCard: View {
             
             Text("Tap to reveal")
                 .font(.caption)
-                .foregroundColor(.tertiary)
+                .foregroundStyle(.tertiary)
         }
     }
     

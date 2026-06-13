@@ -114,7 +114,7 @@ struct AlphabetView: View {
                                 .padding()
                                 .background(
                                     RoundedRectangle(cornerRadius: 8)
-                                        .fill(selectedAnswer == option ? .blue.opacity(0.2) : .regularMaterial)
+                                        .fill(selectedAnswer == option ? .blue.opacity(0.2) : Color(.systemGray6))
                                 )
                             }
                             .disabled(selectedAnswer != nil)
@@ -189,7 +189,7 @@ struct AlphabetView: View {
         let shuffledLetters = distinctiveLetters.shuffled().prefix(8)
         
         recognitionQuestions = shuffledLetters.map { letter in
-            var wrongOptions = contentStore.alphabet
+            let wrongOptions = contentStore.alphabet
                 .filter { $0.id != letter.id }
                 .map { $0.roman }
                 .shuffled()

@@ -36,14 +36,14 @@ enum UnlockType: String, Codable {
     case levelMastery
 }
 
-struct Unlock: Codable {
+struct Unlock: Codable, Hashable {
     let type: UnlockType
     let levelId: String?
     let threshold: Double?
     let minBox: Int?
 }
 
-struct Level: Codable, Identifiable {
+struct Level: Codable, Identifiable, Hashable {
     let id: String
     let order: Int
     let title: String
